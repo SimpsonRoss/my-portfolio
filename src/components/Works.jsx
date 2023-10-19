@@ -105,7 +105,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          These projects act as examples to showcase my skills in software engineering, both front and back end, spanning multiple languages and frameworks. 
+          These recent projects showcase my skills in full stack software engineering, spanning multiple languages and frameworks. Please use the buttons in the top right of each card to view the website and/or the source code.  
         </motion.p>
       </div>
 

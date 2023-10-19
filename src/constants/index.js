@@ -239,7 +239,7 @@ const projects = [
   {
         name: "Karma Coffee",
         description:
-          "Karma Coffee is an e-commerce platform dedicated to offering sustainably sourced coffee beans. This was a 3 person group project, and for my contributions I worked full-stack building the landing page, about page, cart and order functionality, the account page, Stripe checkout and the add-to-cart modal. I also worked on the backend, building the models and controllers to support the previously mentioned functionality. I operated as the GitHub Manager and Scrum Master and helped to coordinate the team and ensure we were working efficiently.",
+          "Karma Coffee is an e-commerce platform for the sale of ethically sourced coffee beans. This was a 3 person group project, and for my contributions I worked full-stack building the landing page, about page, cart and order functionality, the account page, Stripe checkout and the add-to-cart modal. I also worked on the backend, building the models and controllers to support the previously mentioned functionality. I operated as the GitHub Manager and Scrum Master, helping to coordinate the team and ensure that we were working efficiently.",
         tags: [
           {
             name: "python",

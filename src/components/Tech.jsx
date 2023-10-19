@@ -7,15 +7,14 @@ import { fadeIn, textVariant } from "../utils/motion";
 const Tech = () => {
   return (
 
-    <div
+    <motion.div variants={fadeIn("up", "spring", 0.5, 0.75)}
       className='flex flex-row flex-wrap justify-center gap-10'>
         {technologies.map((technology) => (
           <div className='w-28 h-28' key={technology.name}>
             <img src={technology.icon} />
           </div>
         ))}
-    </div>
-
+    </motion.div>
     )
 }
 
