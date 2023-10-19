@@ -1,6 +1,7 @@
 import { Tilt } from "react-tilt";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+
 import { styles } from "../styles";
 import { github, webglobe } from "../assets";
 import { SectionWrapper } from "../hoc";
@@ -8,7 +9,16 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import VimeoEmbed from './VimeoEmbed';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_site_link, videoId }) => {
+const ProjectCard = ({ 
+    index, 
+    name, 
+    description, 
+    tags, 
+    image, 
+    source_code_link, 
+    live_site_link,
+    videoId
+  }) => {
   const [isHovered, setIsHovered] = useState(false);
   const isDesktop = () => window.innerWidth > 1024;
 
@@ -16,27 +26,25 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
   return (
     <motion.div
       variants={fadeIn("up", "spring", 0.5 * index, 0.75)}
-      className="w-full sm:w-100 lg:w-[calc(50%-0.875rem)]"
+      className="w-full lg:w-[calc(48%)] xs:w-full sm:w-full md:w-[calc(48%)] p-1 rounded-2xl shadow-card"
     >
       <Tilt
         options={{
           max: 15,
           scale: 1,
           speed: 250,
-          transition: true,
-          easing: "cubic-bezier(.03,.98,.52,.99)", 
         }}
-        className="bg-gradient-to-t from-black to-orange-500 p-5 rounded-3xl w-full lg:w-full"
+        className="bg-gradient-to-t from-black to-orange-500 p-5 rounded-2xl w-full"
         >
         <div 
-          className="relative w-full lg:h-[42vmin] md:h-auto bg-white rounded-2xl md:p-1 sm:p-1"
+          className="relative w-full lg:h-auto rounded-2xl"
           onMouseEnter={() => isDesktop() && setIsHovered(true)}
           onMouseLeave={() => isDesktop() && setIsHovered(false)}
         >
 
         {
           videoId && isHovered ? 
-            <div className="bg-white rounded-2xl">
+            <div>
             <VimeoEmbed videoId={videoId} />
             </div>
           :
@@ -45,7 +53,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
               alt={name}
               className="w-full h-full object-cover rounded-2xl"
             />
-        }
+        } 
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div

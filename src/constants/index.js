@@ -174,35 +174,34 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "",
-    name: "",
-    designation: "",
-    company: "",
-    image: "",
-  },
-  {
-    testimonial:
-      "",
-    name: "",
-    designation: "",
-    company: "",
-    image: "",
-  },
-  {
-    testimonial:
-      "",
-    name: "",
-    designation: "",
-    company: "",
-    image: "",
-  },
-];
-
+// const testimonials = [
+//   {
+//     testimonial:
+//       "",
+//     name: "",
+//     designation: "",
+//     company: "",
+//     image: "",
+//   },
+//   {
+//     testimonial:
+//       "",
+//     name: "",
+//     designation: "",
+//     company: "",
+//     image: "",
+//   },
+//   {
+//     testimonial:
+//       "",
+//     name: "",
+//     designation: "",
+//     company: "",
+//     image: "",
+//   },
+// ];
 const projects = [
-  {
+   {
     name: "Unssung",
     description:
       "Unssung is a dynamic music-sharing platform that gamifies the discovery of hidden gem tracks. Players challenge each other to unearth the most captivating songs yet to be heard by their circle. Built using the React framework and integrated with Spotify's API, the platform not only promotes music sharing but also automates playlist creation on users' Spotify profiles. With the challenges of deploying on Heroku and managing user states, I incorporated Redis for scalable session storage, ensuring a seamless and engaging user experience.",
@@ -238,66 +237,66 @@ const projects = [
     videoId: "875604882",
   },
   {
-    name: "Karma Coffee",
-    description:
-      "Karma Coffee is an e-commerce platform dedicated to offering sustainably sourced coffee beans. This was a 3 person group project, and for my contributions I worked full-stack building the landing page, about page, cart and order functionality, the account page, Stripe checkout and the add-to-cart modal. I also worked on the backend, building the models and controllers to support the previously mentioned functionality. I operated as the GitHub Manager and Scrum Master and helped to coordinate the team and ensure we were working efficiently.",
-    tags: [
-      {
-        name: "python",
-        color: "white-text-gradient",
-      },
-      {
-        name: "django",
-        color: "white-text-gradient",
-      },
-      {
-        name: "nodeJS",
-        color: "white-text-gradient",
-      },
-      {
-        name: "postgreSQL",
-        color: "white-text-gradient",
-      },
-    ],
-    image: karma,
-    source_code_link: "https://github.com/SimpsonRoss/karma-coffee",
-    live_site_link: "https://karmacoffee-0075707e53e0.herokuapp.com/",
-    videoId: "875520231",
+        name: "Karma Coffee",
+        description:
+          "Karma Coffee is an e-commerce platform dedicated to offering sustainably sourced coffee beans. This was a 3 person group project, and for my contributions I worked full-stack building the landing page, about page, cart and order functionality, the account page, Stripe checkout and the add-to-cart modal. I also worked on the backend, building the models and controllers to support the previously mentioned functionality. I operated as the GitHub Manager and Scrum Master and helped to coordinate the team and ensure we were working efficiently.",
+        tags: [
+          {
+            name: "python",
+            color: "white-text-gradient",
+          },
+          {
+            name: "django",
+            color: "white-text-gradient",
+          },
+          {
+            name: "nodeJS",
+            color: "white-text-gradient",
+          },
+          {
+            name: "postgreSQL",
+            color: "white-text-gradient",
+          },
+        ],
+        image: karma,
+        source_code_link: "https://github.com/SimpsonRoss/karma-coffee",
+        live_site_link: "https://karmacoffee-0075707e53e0.herokuapp.com/",
+        videoId: "875520231",
   },
   {
-    name: "Itinera",
-    description:
-      "Itinera is a cutting-edge travel itinerary generator, designed for travelers seeking a streamlined, collaborative planning experience. Users input their trip details, including destinations, dates, and budget, and can collaboratively fine-tune their preferences with friends. The platform, powered by a combination of MongoDB, Node.js, Express, and JavaScript, instantly crafts a detailed AI-generated daily schedule. To create the itineraries I used Open AI's API, feeding user data into prompts dynamically, and parsing the return data into a cohesive, comprehensive daily itinerary.",
-    tags: [
-      {
-        name: "javascript",
-        color: "white-text-gradient",
-      },
-      {
-        name: "mongoDB",
-        color: "white-text-gradient",
-      },
-      {
-        name: "express",
-        color: "white-text-gradient",
-      },
-      {
-        name: "nodeJS",
-        color: "white-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "white-text-gradient",
-      },
-      {
-        name: "mongoose",
-        color: "white-text-gradient",
-      },
-    ],
-    image: itinera,
-    source_code_link: "https://github.com/SimpsonRoss/itinerary-app",
-    live_site_link: "https://itinera-6ae652d21473.herokuapp.com/",
-    videoId: "875514790",
+        name: "Itinera",
+        description:
+          "Itinera is a cutting-edge travel itinerary generator, designed for travelers seeking a streamlined, collaborative planning experience. Users input their trip details, including destinations, dates, and budget, and can collaboratively fine-tune their preferences with friends. The platform, powered by a combination of MongoDB, Node.js, Express, and JavaScript, instantly crafts a detailed AI-generated daily schedule. To create the itineraries I used Open AI's API, feeding user data into prompts dynamically, and parsing the return data into a cohesive, comprehensive daily itinerary.",
+        tags: [
+          {
+            name: "javascript",
+            color: "white-text-gradient",
+          },
+          {
+            name: "mongoDB",
+            color: "white-text-gradient",
+          },
+          {
+            name: "express",
+            color: "white-text-gradient",
+          },
+          {
+            name: "nodeJS",
+            color: "white-text-gradient",
+          },
+          {
+            name: "bootstrap",
+            color: "white-text-gradient",
+          },
+          {
+            name: "mongoose",
+            color: "white-text-gradient",
+          },
+        ],
+        image: itinera,
+        source_code_link: "https://github.com/SimpsonRoss/itinerary-app",
+        live_site_link: "https://itinera-6ae652d21473.herokuapp.com/",
+        videoId: "875514790",
   },
   {
     name: "Battleships",
@@ -324,4 +323,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
