@@ -1,9 +1,9 @@
 import {
-  mobile,
-  backend,
-  creator,
   python,
-  web,
+  incident,
+  operations,
+  agile,
+  fullstack,
   javascript,
   typescript,
   css,
@@ -18,10 +18,11 @@ import {
   docker,
   spotify,
   lenleys,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  karma,
+  unssung,
+  itinera,
+  battleships,
 } from "../assets";
 
 export const navLinks = [
@@ -34,6 +35,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -42,30 +47,26 @@ export const navLinks = [
 const services = [
   {
     title: "Full Stack Developer",
-    icon: web,
-  },
-  {
-    title: "Operations Specialist",
-    icon: mobile,
+    icon: fullstack,
   },
   {
     title: "Agile Coach",
-    icon: backend,
+    icon: agile,
+  },
+  {
+    title: "Operations Specialist",
+    icon: operations,
   },
   {
     title: "Incident Manager",
-    icon: creator,
+    icon: incident,
   },
 ];
 
 const technologies = [
-  // {
-  //   name: "HTML 5",
-  //   icon: html,
-  // },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "React JS",
+    icon: reactjs,
   },
   {
     name: "JavaScript",
@@ -76,8 +77,8 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "CSS 3",
+    icon: css,
   },
   {
     name: "python",
@@ -131,18 +132,20 @@ const experiences = [
     points: [
       "Led global CS incident management for Spotify's 2022 Wrapped campaign, coordinating 3000+ professionals.",
       "Improved org efficiency with agile training and roadmap alignment.",
-      "Wrote Bash scripts to automate operations, enhancing stakeholder Jira ticket resolution fourfold."
+      "Coordinated international offsites, established and led OKR planning.",
+      "Automated on and offboarding operatons with Bash scripts, enhancing stakeholder Jira ticket resolution fourfold."
     ],
   },
   {
     title: "Customer Operations Manager",
     company_name: "Spotify",
     icon: spotify,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Dec 2020 - Nov 2021",
     points: [
-      "Implemented a bug reporting framework, enhancing user sentiment.",
-      "Managed team and led  incident management, and fraud prevention."
+      "Implemented a bug reporting framework, enhancing user sentiment and product health.",
+      "Managed small team and led incident management, fraud prevention and product support.",
+      "Project managed the transfer of subsidary 'SoundBetter' from Javascript to Ruby on Rails, with minimal downtime.",
     ],
   },
   {
@@ -152,8 +155,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "Dec 2018 - Dec 2020",
     points: [
-      "Employed Scrum, and coached the team to increase output sixfold.",
-      "Managed Spotify's elite customer support tier around the world."
+      "Employed Scrum, and coached the team and management to increase output sixfold.",
+      "Managed Spotify's elite customer support tier, across 7 locations and multiple lanaguages.",
+      "Traveled internationally to train and onboard new teams around the world."
     ],
   },
   {
@@ -164,7 +168,8 @@ const experiences = [
     date: "June 2016 - May 2018",
     points: [
       "Doubled marketing ROI via A|B testing and funnel optimization.",
-      "Collaborated with C-suite on business strategy and maintained site SEO."
+      "Collaborated with C-suite on business strategy and maintained site SEO.",
+      "Built and deployed web pages, email, social and PPC campaigns.",
     ],
   },
 ];
@@ -172,93 +177,150 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "",
+    name: "",
+    designation: "",
+    company: "",
+    image: "",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "",
+    name: "",
+    designation: "",
+    company: "",
+    image: "",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "",
+    name: "",
+    designation: "",
+    company: "",
+    image: "",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Unssung",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Unssung is a dynamic music-sharing platform that gamifies the discovery of hidden gem tracks. Players challenge each other to unearth the most captivating songs yet to be heard by their circle. Built using the React framework and integrated with Spotify's API, the platform not only promotes music sharing but also automates playlist creation on users' Spotify profiles. With the challenges of deploying on Heroku and managing user states, I incorporated Redis for scalable session storage, ensuring a seamless and engaging user experience.",
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
+        color: "white-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "mongoDB",
+        color: "white-text-gradient",
       },
       {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
+        name: "express",
+        color: "white-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: "nodeJS",
+        color: "white-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "bootstrap",
+        color: "white-text-gradient",
+      },
+      {
+        name: "redis",
+        color: "white-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: unssung,
+    source_code_link: "https://github.com/SimpsonRoss/Unssung",
+    live_site_link: "https://trkr8-9a9586e5bb16.herokuapp.com/",
+    videoId: "875604882",
   },
   {
-    name: "Trip Guide",
+    name: "Karma Coffee",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Karma Coffee is an e-commerce platform dedicated to offering sustainably sourced coffee beans. This was a 3 person group project, and for my contributions I worked full-stack building the landing page, about page, cart and order functionality, the account page, Stripe checkout and the add-to-cart modal. I also worked on the backend, building the models and controllers to support the previously mentioned functionality. I operated as the GitHub Manager and Scrum Master and helped to coordinate the team and ensure we were working efficiently.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "python",
+        color: "white-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "django",
+        color: "white-text-gradient",
+      },
+      {
+        name: "nodeJS",
+        color: "white-text-gradient",
+      },
+      {
+        name: "postgreSQL",
+        color: "white-text-gradient",
+      },
+    ],
+    image: karma,
+    source_code_link: "https://github.com/SimpsonRoss/karma-coffee",
+    live_site_link: "https://karmacoffee-0075707e53e0.herokuapp.com/",
+    videoId: "875520231",
+  },
+  {
+    name: "Itinera",
+    description:
+      "Itinera is a cutting-edge travel itinerary generator, designed for travelers seeking a streamlined, collaborative planning experience. Users input their trip details, including destinations, dates, and budget, and can collaboratively fine-tune their preferences with friends. The platform, powered by a combination of MongoDB, Node.js, Express, and JavaScript, instantly crafts a detailed AI-generated daily schedule. To create the itineraries I used Open AI's API, feeding user data into prompts dynamically, and parsing the return data into a cohesive, comprehensive daily itinerary.",
+    tags: [
+      {
+        name: "javascript",
+        color: "white-text-gradient",
+      },
+      {
+        name: "mongoDB",
+        color: "white-text-gradient",
+      },
+      {
+        name: "express",
+        color: "white-text-gradient",
+      },
+      {
+        name: "nodeJS",
+        color: "white-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "white-text-gradient",
+      },
+      {
+        name: "mongoose",
+        color: "white-text-gradient",
+      },
+    ],
+    image: itinera,
+    source_code_link: "https://github.com/SimpsonRoss/itinerary-app",
+    live_site_link: "https://itinera-6ae652d21473.herokuapp.com/",
+    videoId: "875514790",
+  },
+  {
+    name: "Battleships",
+    description:
+      "The game is a cosmic reinvention of the classic Battleships, pitching players against an intuitive alien AI. Set in a space-themed backdrop, players employ advanced weaponry like cannons, lasers, and nukes to decimate the extraterrestrial fleet. Crafted with HTML5, CSS3, and JavaScript, this game offers all the nostalgia but with a modern gaming experience. Key features include device responsiveness, dynamic AI evolution stages, and an engaging animated alien mascot. Despite the challenges faced developing the game logic, the end product is fun and challenging.",
+    tags: [
+      {
+        name: "javascript",
+        color: "white-text-gradient",
+      },
+      {
+        name: "html",
+        color: "white-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "white-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: battleships,
+    source_code_link: "https://github.com/SimpsonRoss/battleships",
+    live_site_link: "https://simpsonross.github.io/battleships/",
+    videoId: "875500100",
   },
 ];
 

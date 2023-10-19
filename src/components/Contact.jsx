@@ -33,13 +33,6 @@ const Contact = () => {
     emailjs.sendForm(
       'service_8pin03t', 
       'template_z2web9b',
-      // {
-      //   from_name: form.name,
-      //   to_name: 'Ross',
-      //   from_email: form.email,
-      //   to_email: 'thisisrosssimpson@gmail.com',
-      //   message: form.message,
-      // },
       formRef.current,
       '8cnZK5TnaQkdQpVNZ'
     )
@@ -68,11 +61,13 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className='text-white font-medium mb-1'>thisisrosssimpson@gmail.com</p>        
+        <p><a className='underline inline-flex mt-3 text-white font-medium mb-4' href='https://www.linkedin.com/in/simpsonre/' target='blank'>LinkedIn</a></p>
 
         <form 
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-6 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
@@ -81,7 +76,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder="Name"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
             />
           </label>
@@ -92,25 +87,25 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder="Email"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea 
-              rows="7"
+              rows="6"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What would you like to say?"
+              placeholder="Message"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
             />
           </label>
 
           <button
             type="submit"
-            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
+            className='bg-white hover:bg-gray-200 text-gray-800 font-semibold py-2 w-fit px-4 border border-gray-400 rounded shadow-md shadow-primary'
           >
             {loading ? 'Sending...' : 'Send'}
           </button>

@@ -1,38 +1,58 @@
 import { Tilt } from "react-tilt";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, webglobe } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import VimeoEmbed from './VimeoEmbed';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_site_link, videoId }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const isDesktop = () => window.innerWidth > 1024;
+
+
   return (
     <motion.div
       variants={fadeIn("up", "spring", 0.5 * index, 0.75)}
+      className="w-full sm:w-100 lg:w-[calc(50%-0.875rem)]"
     >
       <Tilt
         options={{
-          max: 45,
+          max: 15,
           scale: 1,
-          speed: 450
+          speed: 250,
+          transition: true,
+          easing: "cubic-bezier(.03,.98,.52,.99)", 
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img 
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
+        className="bg-gradient-to-t from-black to-orange-500 p-5 rounded-3xl w-full lg:w-full"
+        >
+        <div 
+          className="relative w-full lg:h-[42vmin] md:h-auto bg-white rounded-2xl md:p-1 sm:p-1"
+          onMouseEnter={() => isDesktop() && setIsHovered(true)}
+          onMouseLeave={() => isDesktop() && setIsHovered(false)}
+        >
+
+        {
+          videoId && isHovered ? 
+            <div className="bg-white rounded-2xl">
+            <VimeoEmbed videoId={videoId} />
+            </div>
+          :
+            <img 
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+        }
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            {/* Draft - replace this div with an image that represents a live website, instead of the github logo, and link to the deployed site instead */}
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(live_site_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img src={github} alt="github" className="w-1/2 h-1/2 object-contain"/>
+              <img src={webglobe} alt="webglobe" className="w-1/2 h-1/2 object-contain"/>
 
             </div>
             <div
@@ -77,7 +97,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          These projects act as examples to showcase my skills in software engineering, both front and back end, spanning mulitple languages and frameworks. 
+          These projects act as examples to showcase my skills in software engineering, both front and back end, spanning multiple languages and frameworks. 
         </motion.p>
       </div>
 
@@ -96,4 +116,4 @@ const Works = () => {
   )
 }
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");
